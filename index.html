@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          * {
+              font-family: sans-serif;
+          }  
+          input, #reason{
+              border-style: solid;
+              border-width: 2px;
+              border-color: black;
+              display: inline-block;
+              
+          }
+
+          #textArea {
+              height: 100px;
+          }
+
+          input {
+              margin-left: 17px;
+          }
+
+          #reason {
+
+              width: 172px;
+              border-radius: 5px;   
+              background-image: linear-gradient(90deg, lightgray, lightgray),
+                                linear-gradient(0deg, black, black);
+              background-repeat: no-repeat;
+              background-position: 100%, 90%;
+
+              background-size: 17px 20px,
+                               2px 20px;
+            }
+
+            #additionalInfo {
+                position: relative;
+                top: -33px;
+
+            }
+
+            form {
+                text-align: right;
+            }
+
+            #sendRequest {
+                border-radius: 5px;
+                padding: 2px 15px 2px 15px;
+            }
+            .formBox {
+                margin-right: 70%;
+
+            }
+
+            /*#checkBox {
+                background-image: linear-gradient(90deg, white, white);
+            }*/
+        </style>
+        <title>Contact Form</title>
+    </head>
+    <body>
+        <div class="formBox">
+        <form action="#" method="POST" >
+            First Name: <input type="text" name="firstName"/>
+            <br/>
+            <br>
+            Last Name: <input type="text" name="lastName" />
+            <br/>
+            <br>
+            Email: <input type="text" name="email">
+            <br>
+            <br>
+            Type of Licence: <input type="radio" name="typeRadio" value="Business" checked/>Business
+            <input type="radio" name="typeRadio" value="Personal"/>Personal
+            <br>
+            <br>
+            Reason: <select name="reason" id="reason">
+                <option value="select">Select a Reason</option>
+                <option value="software">Software Support</option>
+                <option value="hardware">Hardware Suppport</option>
+                <option value="information">Information Request</option>
+            </select>
+            <br>
+            <br>
+            <span id="additionalInfo">Additional Information:</span> <input type="textarea" name="additionalInfo" id="textArea"/>
+            <br>
+            <br>
+            <input type="checkbox" id="checkBox" name="checkbox" value="checkbox"/>I have read the terms of service.
+            <br>
+            <br>
+            <input type="submit" id="sendRequest" value="Send Request"/>
+        </form>
+    </div>
+    </body>
+</html>
